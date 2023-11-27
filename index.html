@@ -1,37 +1,87 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-	<head>
-		<meta charset="UTF-8">
-		<title>Barbearia Alura</title>
-		<link rel="stylesheet" href="style.css">
-	</head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <!-- or -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Fones de Ouvidos</title>
+</head>
+<body>
 
-	<body>
-		<header>
-			<h1 class="titulo-principal">Red Velvet shop</h1>
-		</header>
-		<img id="banner" src="2-ChillKill.jpg">
-		<div class="principal">
-			<h2 class="titulo-centralizado">Sobre a Barbearia Alura</h2>
-	 
-			<p>Localizada no coração da cidade a <strong>Barbearia Alura</strong> traz para o mercado o que há de melhor para o seu cabelo e barba. Fundada em 2019, a Barbearia Alura já é destaque na cidade e conquista novos clientes a cada dia.</p>
+    <header>
+        <a href="#" class="logo"><i class='bx bx-headphone'></i>Soundbox</a>
 
-			<p id="missao"><em>Nossa missão é: <strong>"Proporcionar auto-estima e qualidade de vida aos clientes"</strong>.</em></p>
+        <ul class="navegação">
+            <li><a href="#">Visão geral</a></li>
+            <li><a href="#">Teach Specs</a></li>
+            <li><a href="#">Reviews</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul><!--navegação-->
 
-			<p>Oferecemos profissionais experientes e antenados às mudanças no mundo da moda. O atendimento possui padrão de excelência e agilidade, garantindo qualidade e satisfação dos nossos clientes.</p>
-		</div>
+        <div class="header-icons">
+            <i class='bx bx-cart'></i>
+            <div id="menu"><i class='bx bx-menu'></i></div>
+        </div><!--header-icons-->
+    </header>
 
-		<div class="beneficios">
-			<h3 class="titulo-centralizado">Benefícios</h3>
+    <section class="home">
+        <div class="home-img">
+            <img src="product1.png" class="one">
+        </div><!--home-img-->
 
-			<ul>
-				<li class="itens">Atendimento aos Clientes</li>
-				<li class="itens">Espaço diferenciado</li>
-				<li class="itens">Localização</li>
-				<li class="itens">Profissionais Qualificados</li>
-			</ul>
+        <div class="home-text">
 
-			<img src="beneficios.jpg" class="imagembeneficios">
-		</div>
-	</body>
+            <h1>Wireless <br> Headphones</h1>
+            <h5>The smarter way to listen</h5>
+            <h3>$199.00</h3>
+            <a href="#" class="btn">Shop Now</a>
+            
+        </div><!--home-text-->
+    </section><!--home-->
+
+
+    <div class="main">
+        <div class="row">
+            <li><img src="main1.png" onclick="slider('product1.png')"></li>
+        </div><!--row-->
+
+        <div class="row2">
+            <li><img src="main2.png" onclick="slider('product2.png')"></li>
+        </div><!--row2-->
+
+        <div class="row3">
+            <li><img src="main3.png" onclick="slider('product3.png')"></li>
+        </div><!--row3-->
+    </div><!--main-->
+
+
+
+
+
+     
+  
+    <script>
+        function slider (anything){
+            document.querySelector ('.one') .src = anything;
+        };
+
+       let menu = document.querySelector ('#menu-icon');
+       let navbar = document.querySelector ('.navbar');
+
+       menu.onclick = () => {
+        menu.classList.toggle ('bx-x');
+        navbar.classList.toggle ('open');
+       }
+    </script>
+    
+</body>
 </html>
